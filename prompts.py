@@ -65,7 +65,7 @@ EOB_CLAIMS_PROMPT = """ You are an AI model designed to extract structured data 
 
                     """
 
-PATIENT_CPT_PROMPT = """/nYou are an AI model designed to extract structured data from a structured Markdown representation of a PDF document.
+PATIENT_CPT_PROMPT = """\nYou are an AI model designed to extract structured data from a structured Markdown representation of a PDF document.
                 Your task is to read the entire Markdown document and extract the required values while ensuring accuracy and completeness.
 
                 ### **Instructions:**

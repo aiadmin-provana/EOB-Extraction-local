@@ -6,8 +6,11 @@ from llama_index.core import SimpleDirectoryReader
 parser = LlamaParse(
     result_type="markdown",
     api_key="llx-9rttBgLWAMPpLGB0hTXRSgYuPkcRTl7YAeHUElnS5GvyGE5l",
+    # use_vendor_multimodal_model=True,
+    # vendor_multimodal_model_name="openai-gpt-4o-mini"
     gpt4o_mode=True
-    
+    # parsing_mode="parse_document_with_llm",
+    # continuous_mode=True
 )
 
 def parse_pdf(file_path):

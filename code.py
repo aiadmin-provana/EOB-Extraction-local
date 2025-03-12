@@ -5,7 +5,8 @@ from parser import parse_pdf
 import os
 from prompts import EOB_CLAIMS_PROMPT, PATIENT_CPT_PROMPT
 from google.oauth2 import service_account
-
+import fitz
+import time
 
 # Your JSON key as a string (Store securely!)
 json_creds = """{
@@ -46,21 +47,35 @@ vertexai.init(
 model = GenerativeModel("gemini-2.0-pro-exp-02-05") 
 def eob_info_extraction(text):
     try:
+        input_tokens = model.count_tokens(EOB_CLAIMS_PROMPT+text).total_tokens
         response = model.generate_content(contents=EOB_CLAIMS_PROMPT+text, generation_config=generation_config)
+        out_tokens = model.count_tokens(response.text).total_tokens
         response_text = response.text.strip()
 
         if response_text.startswith("```"):
             response_text = "\n".join(response_text.split("\n")[1:-1])
             
-        return json.loads(response_text)
+        response_text = response_text.rstrip(',')
+        
+        try:
+            parsed_json = json.loads(response_text)
+        except json.JSONDecodeError as e:
+            print(f"JSON parsing error: {e}")
+            print("Raw Response:", response_text)
+            return None, input_tokens, out_tokens
+
+        return parsed_json, input_tokens, out_tokens
 
     except Exception as e:
         print(f"An error occurred: {e}")
-        return None
+        return None, 0, 0
+
 
 def pateint_cpt_info_extraction(text, claim_number):
     try:
+        input_tokens = model.count_tokens(PATIENT_CPT_PROMPT+text).total_tokens
         response = model.generate_content(contents="Given Claim number:"+claim_number+PATIENT_CPT_PROMPT+text, generation_config=generation_config)
+        out_tokens = model.count_tokens(response.text).total_tokens
         response_text = response.text.strip()
         
         if response_text.startswith("```"):
@@ -73,50 +88,89 @@ def pateint_cpt_info_extraction(text, claim_number):
         except json.JSONDecodeError as e:
             print(f"JSON parsing error: {e}")
             print("Raw Response:", response_text)
-            return None
+            return None, input_tokens, out_tokens
 
-        return parsed_json
+        return parsed_json, input_tokens, out_tokens
 
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return None, 0, 0
+
+def total_pages(pdf_path):
+    
+    try:
+        pdf_document = fitz.open(pdf_path)
+        page_count = pdf_document.page_count
+        pdf_document.close()  # Important: close the PDF
+        return page_count
+    except FileNotFoundError:
+        print(f"Error: PDF file not found at {pdf_path}")
+        return None
     except Exception as e:
         print(f"An error occurred: {e}")
         return None
     
-def process_pdf(pdf_path, output_pdf_path):
-    final_output = []
     
+def process_pdf(pdf_path, output_pdf_path):
+    inp_cost_per_m_tokens = 1.25 / 10**6
+    out_cost_per_m_tokens = 5 / 10**6
+    total_input_tokens = 0
+    total_output_tokens = 0
+    final_output = []
+
+    pages = total_pages(pdf_path)
+    llama_cost_per_page = 0.01
+
     text = parse_pdf(pdf_path)
     if text is None:
-        print("Failed to parse PDF to markdown.")
         return
-    
-    eob_claims_info = eob_info_extraction(text)
+
+    retries = 3
+    eob_claims_info, inp, out = None, 0, 0
+    for _ in range(retries):
+        eob_claims_info, inp, out = eob_info_extraction(text)
+        if eob_claims_info:
+            break
+        time.sleep(2)
+
+    total_input_tokens += inp
+    total_output_tokens += out
+
     if not eob_claims_info:
-        print("Failed to extract EOB claims info.")
         return
-    
+
     eob_info = eob_claims_info.get("EOB_info", {})
     claims = eob_claims_info.get("claim_numbers", [])
-
-    print("Extracted EOB and claims info")
-    print("Claims:", claims)
+    print("Extracted Claims in this pdf:", claims)
 
     for claim_number in claims:
-        patient_cpt_info = pateint_cpt_info_extraction(text, claim_number)
-        if patient_cpt_info is None:
-            print(f"Failed to extract patient CPT info for claim number: {claim_number}")
-            continue
-        else:
-            patient_name = patient_cpt_info.get("Patient_info", {}).get("Patient_Name", "")
-            print("Extracted patient CPT info for:", claim_number, "-", patient_name)
-            patient_info = patient_cpt_info.get("Patient_info", {})
-            cpt_info = patient_cpt_info.get("service_line_items", [])
-            final_entry = {
-                "EOB_info": eob_info,
-                "Patient_info": patient_info,
-                "service_line_items": cpt_info
-            }
-            final_output.append(final_entry)
+        patient_cpt_info, inp, out = None, 0, 0
+        for _ in range(retries):
+            patient_cpt_info, inp, out = pateint_cpt_info_extraction(text, claim_number)
+            if patient_cpt_info:
+                break
+            time.sleep(2)
 
+        total_input_tokens += inp
+        total_output_tokens += out
+
+        if patient_cpt_info is None:
+            continue
+        
+        patient_info = patient_cpt_info.get("Patient_info", {})
+        cpt_info = patient_cpt_info.get("service_line_items", [])
+        print("Extracted service line items info for {} claim number".format(claim_number))
+        final_entry = {
+            "EOB_info": eob_info,
+            "Patient_info": patient_info,
+            "service_line_items": cpt_info
+        }
+        final_output.append(final_entry)
+    
+    total_cost = inp_cost_per_m_tokens*total_input_tokens+out_cost_per_m_tokens*total_output_tokens+pages*llama_cost_per_page
+    print("Total cost for this pdf:",total_cost)
+    print("Cost per page:", total_cost/pages)
     try:
         
         with open(output_pdf_path, "w") as json_file:
@@ -125,7 +179,7 @@ def process_pdf(pdf_path, output_pdf_path):
     except Exception as e:
         print(f"An error occurred while saving the output: {e}")
 
-input_pdf_path = r"C:\Users\nikhil.rajput\Desktop\GeminiStarterApps\docs\input pdfs\Fw_ Sample EOBs via Availity\02132025_0085036395_$4.06_Availityfederalemployee.pdf"
+input_pdf_path = r"C:\Users\nikhil.rajput\Desktop\GeminiStarterApps\docs\input pdfs\Fw_ Sample EOBs via Availity\01022025_S3478759_$73.19_AvailityUHC.pdf"
 file_name = os.path.basename(input_pdf_path).replace(".pdf", ".json")
 
 output_pdf_path = r"C:\Users\nikhil.rajput\Desktop\GeminiStarterApps\docs\Llama_Parse\outputs\\"+file_name
