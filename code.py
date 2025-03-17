@@ -179,9 +179,8 @@ def process_pdf(pdf_path, output_pdf_path):
     except Exception as e:
         print(f"An error occurred while saving the output: {e}")
 
-input_pdf_path = r"C:\Users\nikhil.rajput\Desktop\GeminiStarterApps\docs\input pdfs\Fw_ Sample EOBs via Availity\01022025_S3478759_$73.19_AvailityUHC.pdf"
+input_pdf_path = r"C:\Users\nikhil.rajput\Downloads\ADVANCEDMOTION REHABILITATION_HIGHMARKBLUESHIELD_03-04-2025_$0.00_Availity.pdf"
 file_name = os.path.basename(input_pdf_path).replace(".pdf", ".json")
-
 output_pdf_path = r"C:\Users\nikhil.rajput\Desktop\GeminiStarterApps\docs\Llama_Parse\outputs\\"+file_name
 process_pdf(input_pdf_path, output_pdf_path)
 

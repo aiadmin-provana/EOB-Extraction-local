@@ -65,7 +65,7 @@ EOB_CLAIMS_PROMPT = """ You are an AI model designed to extract structured data 
 
                     """
 
-PATIENT_CPT_PROMPT = """\nYou are an AI model designed to extract structured data from a structured Markdown representation of a PDF document.
+PATIENT_CPT_PROMPT = """You are an AI model designed to extract structured data from a structured Markdown representation of a PDF document.
                 Your task is to read the entire Markdown document and extract the required values while ensuring accuracy and completeness.
 
                 ### **Instructions:**
@@ -93,14 +93,15 @@ PATIENT_CPT_PROMPT = """\nYou are an AI model designed to extract structured dat
                     - **Date of Service** = Extracted from the table, not the patient claim date.
                     - **Reason Code** =  Adjustments(Qty)
                     Note: Extract all the values in the column Adjustments(Qty) and separate them by commas.
-                    - **Paid Amount** = Payment
-                    - **Allowed Amount** = Supp Info (AMT)
-                    - **Billed Amount** = Charge
-                    - **Adj Amount** = Adj Amount
+                    - **Paid_Amount** = Payment
+                    - **Allowed_Amount** = Supp Info (AMT)
+                    - **Billed_Amount** = Charge
+                    - **Adj_Amount** = Adj Amount
                     Note:Extract all values from "Adj Amount" column and separate by comma in the Adj_Amount field; Note: For reason code = PR-1, PR-2, PR-3 map the value extracted to the corresponding fields instead of putting in adj_amount field:
                     Deductible = PR-1,
                     Co-insurance = PR-2,
                     Co-pay = PR-3;(For example if we have two reason codes PR-3: $11, CO-45: $44,CO-45: $55; then put $11(value of PR-1) in co-pay and rest other values of CO-45 should go in adj_amount field only separated by comma)
+                    Note: only for PR-1, PR-2, PR-3 values should not be present in the adj_amount field, rest every value lets it be PR-XX, CO-XX must be included in the adj_amount filed.
                 - Extract full Date of Service values, even if they span multiple lines.
                 - Ensure multiple reason codes are separated by commas instead of line breaks.
                 9. **Maintain the structured format** by preserving lists, tables, and hierarchical data.
