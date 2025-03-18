@@ -1,6 +1,7 @@
 import json
 import vertexai
 from vertexai.generative_models import GenerativeModel, Part, Content
+
 from parser import parse_pdf
 import os
 from prompts import EOB_CLAIMS_PROMPT, PATIENT_CPT_PROMPT
@@ -45,10 +46,19 @@ vertexai.init(
 
 # Initialize the Gemini model with a valid public model name
 model = GenerativeModel("gemini-2.0-pro-exp-02-05") 
-def eob_info_extraction(text):
+def eob_info_extraction(text, pdf_path):
     try:
-        input_tokens = model.count_tokens(EOB_CLAIMS_PROMPT+text).total_tokens
-        response = model.generate_content(contents=EOB_CLAIMS_PROMPT+text, generation_config=generation_config)
+        with open(pdf_path, "rb") as f:
+            pdf_data = f.read()
+
+        pdf_part = Part.from_data(data=pdf_data, mime_type="application/pdf")
+        content = [
+            Content(role="user", parts=[pdf_part]),
+            Content(role="user", parts=[Part.from_text(text+EOB_CLAIMS_PROMPT)])
+        ]
+        
+        input_tokens = model.count_tokens(EOB_CLAIMS_PROMPT+text).total_tokens + count_tokens_pdf(pdf_data)
+        response = model.generate_content(contents=content, generation_config=generation_config)
         out_tokens = model.count_tokens(response.text).total_tokens
         response_text = response.text.strip()
 
@@ -71,10 +81,19 @@ def eob_info_extraction(text):
         return None, 0, 0
 
 
-def pateint_cpt_info_extraction(text, claim_number):
+def pateint_cpt_info_extraction(text, claim_number, pdf_path):
     try:
-        input_tokens = model.count_tokens(PATIENT_CPT_PROMPT+text).total_tokens
-        response = model.generate_content(contents="Given Claim number:"+claim_number+PATIENT_CPT_PROMPT+text, generation_config=generation_config)
+        
+        with open(pdf_path, "rb") as f:
+            pdf_data = f.read()
+
+        pdf_part = Part.from_data(data=pdf_data, mime_type="application/pdf")
+        content = [
+            Content(role="user", parts=[pdf_part]),
+            Content(role="user", parts=[Part.from_text("Given Claim number:"+claim_number+text+PATIENT_CPT_PROMPT)])
+        ]
+        input_tokens = model.count_tokens(PATIENT_CPT_PROMPT+text).total_tokens + count_tokens_pdf(pdf_data)
+        response = model.generate_content(contents=content, generation_config=generation_config)
         out_tokens = model.count_tokens(response.text).total_tokens
         response_text = response.text.strip()
         
@@ -111,6 +130,24 @@ def total_pages(pdf_path):
         print(f"An error occurred: {e}")
         return None
     
+def count_tokens_pdf(pdf_data):
+        
+    doc = fitz.open(stream=pdf_data, filetype="pdf")
+    image_parts = []
+    for page_num in range(doc.page_count):
+        page = doc[page_num]
+        pix = page.get_pixmap()
+        img_bytes = pix.tobytes("png")
+        image_parts.append(Part.from_data(data=img_bytes, mime_type="image/png"))
+    doc.close()
+
+    total_image_tokens = 0
+    for part in image_parts:
+        content = Content(parts=[part]) #create content object
+        total_image_tokens += model.count_tokens(content).total_tokens #access token_count attribute.
+
+    return total_image_tokens
+    
     
 def process_pdf(pdf_path, output_pdf_path):
     inp_cost_per_m_tokens = 1.25 / 10**6
@@ -125,11 +162,11 @@ def process_pdf(pdf_path, output_pdf_path):
     text = parse_pdf(pdf_path)
     if text is None:
         return
-
+    print("Extracting EOB and Claims...")
     retries = 3
     eob_claims_info, inp, out = None, 0, 0
     for _ in range(retries):
-        eob_claims_info, inp, out = eob_info_extraction(text)
+        eob_claims_info, inp, out = eob_info_extraction(text, pdf_path)
         if eob_claims_info:
             break
         time.sleep(2)
@@ -147,7 +184,7 @@ def process_pdf(pdf_path, output_pdf_path):
     for claim_number in claims:
         patient_cpt_info, inp, out = None, 0, 0
         for _ in range(retries):
-            patient_cpt_info, inp, out = pateint_cpt_info_extraction(text, claim_number)
+            patient_cpt_info, inp, out = pateint_cpt_info_extraction(text, claim_number, pdf_path)
             if patient_cpt_info:
                 break
             time.sleep(2)
@@ -179,7 +216,7 @@ def process_pdf(pdf_path, output_pdf_path):
     except Exception as e:
         print(f"An error occurred while saving the output: {e}")
 
-input_pdf_path = r"C:\Users\nikhil.rajput\Downloads\ADVANCEDMOTION REHABILITATION_HIGHMARKBLUESHIELD_03-04-2025_$0.00_Availity.pdf"
+input_pdf_path = r"C:\Users\nikhil.rajput\Desktop\GeminiStarterApps\docs\input pdfs\Fw_ Sample EOBs via Availity\01022025_S3478759_$73.19_AvailityUHC.pdf"
 file_name = os.path.basename(input_pdf_path).replace(".pdf", ".json")
 output_pdf_path = r"C:\Users\nikhil.rajput\Desktop\GeminiStarterApps\docs\Llama_Parse\outputs\\"+file_name
 process_pdf(input_pdf_path, output_pdf_path)

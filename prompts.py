@@ -1,11 +1,11 @@
 EOB_CLAIMS_PROMPT = """ You are an AI model designed to extract structured data from a **Markdown representation of a PDF document**.
-                    Your task is to read the entire Markdown text and extract the required values along with their **bounding box coordinates**.
-
+                    Your task is to read the entire Markdown text and extract the required values from it. Along with that extract the **bounding box coordinates** of those values from the given PDF.
+                    Extraction of the values should be from the markdown text only and bounding box coordinates of the corresponding values must be from the PDF only.
                     ### **Instructions:**
-                    1. **Process the entire document** to ensure all relevant details are captured accurately.
+                    1. **Process the entire markdown text** to ensure all relevant details are captured accurately.
                     2. **Extract the first occurrence** of each requested value from the document.
                     3. **Extract all unique claim numbers** and include them as a list of strings in the output JSON.
-                    4. **Provide bounding box coordinates** as a list of integers in the format `[y_min, x_min, y_max, x_max]`.
+                    4. **Provide bounding box coordinates** as a list of integers in the format `[y_min, x_min, y_max, x_max]` from the pdf for each extracted value.
                     5. **Return only the JSON output** in the exact format given below, without any explanations or extra text.
                     6. If a field value spans multiple lines, replace any `\n` with a **single space**.
                     7. Extract the **page number** where the EOB details are located and include it in the `eob_page_number` field.
@@ -60,20 +60,20 @@ EOB_CLAIMS_PROMPT = """ You are an AI model designed to extract structured data 
                     ```
                     Ensure accuracy in extraction and maintain the format strictly.
                     
-                    Below is the markdown text extracted from the PDF:\n
+                    Below is the markdown text extracted from the PDF along with the PDF document:\n
 
 
                     """
 
-PATIENT_CPT_PROMPT = """You are an AI model designed to extract structured data from a structured Markdown representation of a PDF document.
-                Your task is to read the entire Markdown document and extract the required values while ensuring accuracy and completeness.
-
+PATIENT_CPT_PROMPT = """You are an AI model designed to extract structured data from a **Markdown representation of a PDF document**.
+                    Your task is to read the entire Markdown text and extract the required values. along with that extract the **bounding box coordinates** of those values from the given PDF.
+                    Extraction of the values should be from the markdown text only and bounding box coordinates of the corresponding values must be from the PDF only.
                 ### **Instructions:**
 
-                1. **Process the entire Markdown document** to ensure all relevant details are captured.
-                2. **Locate the given claim number** in the document.
-                4. **Provide bounding box coordinates** of the extracted value as a list of integers in the format `[y_min, x_min, y_max, x_max]`.
-                4. **Extract patient information and service line items** associated with the specified claim number.&#x20;
+                1. **Process the entire Markdown text** to ensure all relevant details are captured.
+                2. **Locate the given claim number** in the markdown text.
+                4. **Provide bounding box coordinates** of the extracted value as a list of integers in the format `[y_min, x_min, y_max, x_max]` from thr PDF document.
+                4. **Extract patient information and service line items** associated with the specified claim number.
                 5. **Populate the provided JSON template** with the extracted information.
                 6. **Ensure data integrity** by preserving multi-line values correctly, replacing line breaks with spaces where necessary.
                 7. **For the patient information section:**
@@ -182,5 +182,5 @@ PATIENT_CPT_PROMPT = """You are an AI model designed to extract structured data 
                     ```
                     Ensure accuracy in extraction and maintain the format strictly.
                     
-                    Below is the markdown text extracted from the PDF:/n
+                    Below is the markdown text extracted from the PDF along with the PDF document:/n
                     """

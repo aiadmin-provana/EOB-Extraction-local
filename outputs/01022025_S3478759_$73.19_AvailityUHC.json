@@ -1,1269 +1,461 @@
 [
-    {
-        "EOB_info": {
-            "EOB_file_path": "",
-            "EOB_file_downloaded_date": "",
-            "EOB_page_number": "1",
-            "Payer": "UNITED HEALTHCARE INSURANCE COMPANY",
-            "Payer_bounding_box": [
-                19,
-                38,
-                38,
-                341
-            ],
-            "Provider": "PAUL WIENER PHYSICAL THERAPY PC",
-            "Provider_bounding_box": [
-                19,
-                449,
-                38,
-                728
-            ],
-            "Payee_ID": "1689750069",
-            "Payee_ID_bounding_box": [
-                49,
-                449,
-                68,
-                553
-            ],
-            "Cheque_number": "S3478759",
-            "Cheque_number_bounding_box": [
-                69,
-                449,
-                88,
-                613
-            ],
-            "Cheque_amount": "73.19",
-            "Cheque_amount_bounding_box": [
-                90,
-                449,
-                108,
-                580
-            ],
-            "Cheque_date": "01/02/2025",
-            "Cheque_date_bounding_box": [
-                110,
-                449,
-                128,
-                601
-            ]
-        },
-        "Patient_info": {
-            "Patient_Name": "BENITES, HECTOR",
-            "Patient_Name_bounding_box": [
-                357,
-                29,
-                373,
-                153
-            ],
-            "Claim_Number": "STL3014658300",
-            "Claim_Number_bounding_box": [
-                376,
-                29,
-                392,
-                164
-            ],
-            "Date_of_Service": "12/04/2024 - 12/04/2024",
-            "Date_of_Service_bounding_box": [
-                392,
-                29,
-                408,
-                212
-            ],
-            "Patient_Account_Number": "107830618T0",
-            "Patient_Account_Number_bounding_box": [
-                431,
-                29,
-                446,
-                236
-            ],
-            "Diagnosis": "",
-            "Diagnosis_bounding_box": [],
-            "Patient_ID": "98278098700",
-            "Patient_ID_bounding_box": [
-                411,
-                29,
-                427,
-                153
-            ],
-            "Primary_insurance": "19",
-            "Primary_insurance_bounding_box": [
-                408,
-                29,
-                427,
-                236
-            ],
-            "Claim_Frequency": "1",
-            "Claim_Frequency_bounding_box": [
-                448,
-                266,
-                464,
-                389
-            ],
-            "Claim_charge": "$225.00",
-            "Claim_charge_bounding_box": [
-                431,
-                266,
-                446,
-                389
-            ],
-            "Claim_Payment": "$0.00",
-            "Claim_Payment_bounding_box": [
-                467,
-                266,
-                483,
-                389
-            ],
-            "Patient_responsibility": "$0.00",
-            "Patient_responsibility_bounding_box": [
-                483,
-                266,
-                499,
-                389
-            ],
-            "Group_Policy": "92014",
-            "Group_Policy_bounding_box": [
-                411,
-                173,
-                427,
-                266
-            ],
-            "Patient_Date_of_Birth": "",
-            "Patient_Date_of_Birth_bounding_box": [],
-            "Subscriber_id": "",
-            "Subscriber_id_bounding_box": []
-        },
-        "service_line_items": [
-            {
-                "CPT_HCPCS": "HC:97112",
-                "CPT_HCPCS_bounding_box": [
-                    576,
-                    316,
-                    592,
-                    381
-                ],
-                "Modifier": "GP",
-                "Modifier_bounding_box": [
-                    576,
-                    316,
-                    592,
-                    381
-                ],
-                "DU": "1",
-                "DU_bounding_box": [
-                    576,
-                    316,
-                    592,
-                    381
-                ],
-                "Reason_Code": "CO-B11",
-                "Reason_Code_bounding_box": [
-                    576,
-                    416,
-                    592,
-                    471
-                ],
-                "Adj_Amount": "75.00",
-                "Adj_Amount_bounding_box": [
-                    576,
-                    506,
-                    592,
-                    553
-                ],
-                "Paid_Amount": "$0.00",
-                "Paid_Amount_bounding_box": [
-                    576,
-                    573,
-                    592,
-                    611
-                ],
-                "Allowed_Amount": "$75.00",
-                "Allowed_Amount_bounding_box": [
-                    576,
-                    416,
-                    592,
-                    458
-                ],
-                "Payer_Code": "",
-                "Payer_Code_bounding_box": [],
-                "Billed_Amount": null,
-                "Billed_Amount_bounding_box": [],
-                "Dx_Pt": "",
-                "Dx_Pt_bounding_box": [],
-                "Co_Pay": "",
-                "Co_Pay_bounding_box": [],
-                "Deductible": "",
-                "Deductible_bounding_box": [],
-                "Co_insurance": "",
-                "Co_insurance_bounding_box": [],
-                "Bill_to_Secondary": "",
-                "Bill_to_Secondary_bounding_box": [],
-                "Date_of_Service": "12/04/2024 - 12/04/2024",
-                "Date_of_Service_bounding_box": [
-                    576,
-                    89,
-                    592,
-                    225
-                ],
-                "User_Status": "",
-                "User_Status_bounding_box": []
-            },
-            {
-                "CPT_HCPCS": "HC:97110",
-                "CPT_HCPCS_bounding_box": [
-                    600,
-                    316,
-                    616,
-                    381
-                ],
-                "Modifier": "GP",
-                "Modifier_bounding_box": [
-                    600,
-                    316,
-                    616,
-                    381
-                ],
-                "DU": "1",
-                "DU_bounding_box": [
-                    600,
-                    316,
-                    616,
-                    381
-                ],
-                "Reason_Code": "CO-B11",
-                "Reason_Code_bounding_box": [
-                    600,
-                    416,
-                    616,
-                    471
-                ],
-                "Adj_Amount": "75.00",
-                "Adj_Amount_bounding_box": [
-                    600,
-                    506,
-                    616,
-                    553
-                ],
-                "Paid_Amount": "$0.00",
-                "Paid_Amount_bounding_box": [
-                    600,
-                    573,
-                    616,
-                    611
-                ],
-                "Allowed_Amount": "$75.00",
-                "Allowed_Amount_bounding_box": [
-                    600,
-                    416,
-                    616,
-                    458
-                ],
-                "Payer_Code": "",
-                "Payer_Code_bounding_box": [],
-                "Billed_Amount": null,
-                "Billed_Amount_bounding_box": [],
-                "Dx_Pt": "",
-                "Dx_Pt_bounding_box": [],
-                "Co_Pay": "",
-                "Co_Pay_bounding_box": [],
-                "Deductible": "",
-                "Deductible_bounding_box": [],
-                "Co_insurance": "",
-                "Co_insurance_bounding_box": [],
-                "Bill_to_Secondary": "",
-                "Bill_to_Secondary_bounding_box": [],
-                "Date_of_Service": "12/04/2024 - 12/04/2024",
-                "Date_of_Service_bounding_box": [
-                    600,
-                    89,
-                    616,
-                    225
-                ],
-                "User_Status": "",
-                "User_Status_bounding_box": []
-            },
-            {
-                "CPT_HCPCS": "HC:97140",
-                "CPT_HCPCS_bounding_box": [
-                    624,
-                    316,
-                    640,
-                    381
-                ],
-                "Modifier": "GP",
-                "Modifier_bounding_box": [
-                    624,
-                    316,
-                    640,
-                    381
-                ],
-                "DU": "1",
-                "DU_bounding_box": [
-                    624,
-                    316,
-                    640,
-                    381
-                ],
-                "Reason_Code": "CO-B11",
-                "Reason_Code_bounding_box": [
-                    624,
-                    416,
-                    640,
-                    471
-                ],
-                "Adj_Amount": "75.00",
-                "Adj_Amount_bounding_box": [
-                    624,
-                    506,
-                    640,
-                    553
-                ],
-                "Paid_Amount": "$0.00",
-                "Paid_Amount_bounding_box": [
-                    624,
-                    573,
-                    640,
-                    611
-                ],
-                "Allowed_Amount": "$75.00",
-                "Allowed_Amount_bounding_box": [
-                    624,
-                    416,
-                    640,
-                    458
-                ],
-                "Payer_Code": "",
-                "Payer_Code_bounding_box": [],
-                "Billed_Amount": null,
-                "Billed_Amount_bounding_box": [],
-                "Dx_Pt": "",
-                "Dx_Pt_bounding_box": [],
-                "Co_Pay": "",
-                "Co_Pay_bounding_box": [],
-                "Deductible": "",
-                "Deductible_bounding_box": [],
-                "Co_insurance": "",
-                "Co_insurance_bounding_box": [],
-                "Bill_to_Secondary": "",
-                "Bill_to_Secondary_bounding_box": [],
-                "Date_of_Service": "12/04/2024 - 12/04/2024",
-                "Date_of_Service_bounding_box": [
-                    624,
-                    89,
-                    640,
-                    225
-                ],
-                "User_Status": "",
-                "User_Status_bounding_box": []
-            }
-        ]
+  {
+    "EOB_info": {
+      "EOB_file_path": "",
+      "EOB_file_downloaded_date": "",
+      "EOB_page_number": "1",
+      "Payer": "UNITED HEALTHCARE INSURANCE COMPANY",
+      "Payer_bounding_box": [269, 33, 281, 256],
+      "Provider": "PAUL WIENER PHYSICAL THERAPY PC",
+      "Provider_bounding_box": [271, 696, 295, 842],
+      "Payee_ID": "1689750069",
+      "Payee_ID_bounding_box": [301, 533, 313, 600],
+      "Cheque_number": "S3478759",
+      "Cheque_number_bounding_box": [318, 533, 330, 600],
+      "Cheque_amount": "$73.19",
+      "Cheque_amount_bounding_box": [572, 825, 586, 958],
+      "Cheque_date": "01/02/2025",
+      "Cheque_date_bounding_box": [351, 533, 363, 600]
     },
-    {
-        "EOB_info": {
-            "EOB_file_path": "",
-            "EOB_file_downloaded_date": "",
-            "EOB_page_number": "1",
-            "Payer": "UNITED HEALTHCARE INSURANCE COMPANY",
-            "Payer_bounding_box": [
-                19,
-                38,
-                38,
-                341
-            ],
-            "Provider": "PAUL WIENER PHYSICAL THERAPY PC",
-            "Provider_bounding_box": [
-                19,
-                449,
-                38,
-                728
-            ],
-            "Payee_ID": "1689750069",
-            "Payee_ID_bounding_box": [
-                49,
-                449,
-                68,
-                553
-            ],
-            "Cheque_number": "S3478759",
-            "Cheque_number_bounding_box": [
-                69,
-                449,
-                88,
-                613
-            ],
-            "Cheque_amount": "73.19",
-            "Cheque_amount_bounding_box": [
-                90,
-                449,
-                108,
-                580
-            ],
-            "Cheque_date": "01/02/2025",
-            "Cheque_date_bounding_box": [
-                110,
-                449,
-                128,
-                601
-            ]
-        },
-        "Patient_info": {
-            "Patient_Name": "HALUSKA, MICHAEL F",
-            "Patient_Name_bounding_box": [
-                563,
-                27,
-                580,
-                223
-            ],
-            "Claim_Number": "STL3014658200",
-            "Claim_Number_bounding_box": [
-                584,
-                27,
-                601,
-                167
-            ],
-            "Date_of_Service": "12/04/2024 - 12/04/2024",
-            "Date_of_Service_bounding_box": [
-                604,
-                27,
-                622,
-                223
-            ],
-            "Patient_Account_Number": "107830634T0",
-            "Patient_Account_Number_bounding_box": [
-                754,
-                27,
-                772,
-                231
-            ],
-            "Diagnosis": null,
-            "Diagnosis_bounding_box": null,
-            "Patient_ID": "98200342600",
-            "Patient_ID_bounding_box": [
-                674,
-                27,
-                691,
-                173
-            ],
-            "Primary_insurance": "19",
-            "Primary_insurance_bounding_box": [
-                604,
-                243,
-                622,
-                913
-            ],
-            "Claim_Frequency": "1",
-            "Claim_Frequency_bounding_box": [
-                794,
-                27,
-                812,
-                182
-            ],
-            "Claim_charge": "275.00",
-            "Claim_charge_bounding_box": [
-                694,
-                27,
-                712,
-                338
-            ],
-            "Claim_Payment": "0.00",
-            "Claim_Payment_bounding_box": [
-                814,
-                27,
-                832,
-                175
-            ],
-            "Patient_responsibility": "0.00",
-            "Patient_responsibility_bounding_box": [
-                854,
-                27,
-                872,
-                175
-            ],
-            "Group_Policy": "92014",
-            "Group_Policy_bounding_box": [
-                674,
-                193,
-                691,
-                331
-            ],
-            "Patient_Date_of_Birth": null,
-            "Patient_Date_of_Birth_bounding_box": null,
-            "Subscriber_id": null,
-            "Subscriber_id_bounding_box": null
-        },
-        "service_line_items": [
-            {
-                "CPT_HCPCS": "HC:97112",
-                "CPT_HCPCS_bounding_box": [
-                    894,
-                    436,
-                    912,
-                    513
-                ],
-                "Modifier": "GP,KX",
-                "Modifier_bounding_box": [
-                    894,
-                    436,
-                    912,
-                    535
-                ],
-                "DU": "1",
-                "DU_bounding_box": [
-                    894,
-                    436,
-                    912,
-                    553
-                ],
-                "Reason_Code": "CO-B11",
-                "Reason_Code_bounding_box": [
-                    914,
-                    436,
-                    932,
-                    513
-                ],
-                "Adj_Amount": "75.00",
-                "Adj_Amount_bounding_box": [
-                    914,
-                    533,
-                    932,
-                    593
-                ],
-                "Paid_Amount": "0.00",
-                "Paid_Amount_bounding_box": [
-                    914,
-                    613,
-                    932,
-                    656
-                ],
-                "Allowed_Amount": null,
-                "Allowed_Amount_bounding_box": null,
-                "Payer_Code": "N418",
-                "Payer_Code_bounding_box": [
-                    894,
-                    533,
-                    912,
-                    573
-                ],
-                "Billed_Amount": "75.00",
-                "Billed_Amount_bounding_box": [
-                    914,
-                    533,
-                    932,
-                    576
-                ],
-                "Dx_Pt": null,
-                "Dx_Pt_bounding_box": null,
-                "Co_Pay": null,
-                "Co_Pay_bounding_box": null,
-                "Deductible": null,
-                "Deductible_bounding_box": null,
-                "Co_insurance": null,
-                "Co_insurance_bounding_box": null,
-                "Bill_to_Secondary": null,
-                "Bill_to_Secondary_bounding_box": null,
-                "Date_of_Service": "12/04/2024 - 12/04/2024",
-                "Date_of_Service_bounding_box": [
-                    894,
-                    27,
-                    912,
-                    215
-                ],
-                "User_Status": null,
-                "User_Status_bounding_box": null
-            },
-            {
-                "CPT_HCPCS": "HC:97110",
-                "CPT_HCPCS_bounding_box": [
-                    934,
-                    436,
-                    952,
-                    513
-                ],
-                "Modifier": "GP,KX",
-                "Modifier_bounding_box": [
-                    934,
-                    436,
-                    952,
-                    535
-                ],
-                "DU": "1",
-                "DU_bounding_box": [
-                    934,
-                    436,
-                    952,
-                    553
-                ],
-                "Reason_Code": "CO-B11",
-                "Reason_Code_bounding_box": [
-                    954,
-                    436,
-                    972,
-                    513
-                ],
-                "Adj_Amount": "75.00",
-                "Adj_Amount_bounding_box": [
-                    954,
-                    533,
-                    972,
-                    593
-                ],
-                "Paid_Amount": "0.00",
-                "Paid_Amount_bounding_box": [
-                    954,
-                    613,
-                    972,
-                    656
-                ],
-                "Allowed_Amount": null,
-                "Allowed_Amount_bounding_box": null,
-                "Payer_Code": "N418",
-                "Payer_Code_bounding_box": [
-                    934,
-                    533,
-                    952,
-                    573
-                ],
-                "Billed_Amount": "75.00",
-                "Billed_Amount_bounding_box": [
-                    954,
-                    533,
-                    972,
-                    576
-                ],
-                "Dx_Pt": null,
-                "Dx_Pt_bounding_box": null,
-                "Co_Pay": null,
-                "Co_Pay_bounding_box": null,
-                "Deductible": null,
-                "Deductible_bounding_box": null,
-                "Co_insurance": null,
-                "Co_insurance_bounding_box": null,
-                "Bill_to_Secondary": null,
-                "Bill_to_Secondary_bounding_box": null,
-                "Date_of_Service": "12/04/2024 - 12/04/2024",
-                "Date_of_Service_bounding_box": [
-                    934,
-                    27,
-                    952,
-                    215
-                ],
-                "User_Status": null,
-                "User_Status_bounding_box": null
-            },
-            {
-                "CPT_HCPCS": "HC:97140",
-                "CPT_HCPCS_bounding_box": [
-                    974,
-                    436,
-                    992,
-                    513
-                ],
-                "Modifier": "GP,KX",
-                "Modifier_bounding_box": [
-                    974,
-                    436,
-                    992,
-                    535
-                ],
-                "DU": "1",
-                "DU_bounding_box": [
-                    974,
-                    436,
-                    992,
-                    553
-                ],
-                "Reason_Code": "CO-B11",
-                "Reason_Code_bounding_box": [
-                    994,
-                    436,
-                    1012,
-                    513
-                ],
-                "Adj_Amount": "75.00",
-                "Adj_Amount_bounding_box": [
-                    994,
-                    533,
-                    1012,
-                    593
-                ],
-                "Paid_Amount": "0.00",
-                "Paid_Amount_bounding_box": [
-                    994,
-                    613,
-                    1012,
-                    656
-                ],
-                "Allowed_Amount": null,
-                "Allowed_Amount_bounding_box": null,
-                "Payer_Code": "N418",
-                "Payer_Code_bounding_box": [
-                    974,
-                    533,
-                    992,
-                    573
-                ],
-                "Billed_Amount": "75.00",
-                "Billed_Amount_bounding_box": [
-                    994,
-                    533,
-                    1012,
-                    576
-                ],
-                "Dx_Pt": null,
-                "Dx_Pt_bounding_box": null,
-                "Co_Pay": null,
-                "Co_Pay_bounding_box": null,
-                "Deductible": null,
-                "Deductible_bounding_box": null,
-                "Co_insurance": null,
-                "Co_insurance_bounding_box": null,
-                "Bill_to_Secondary": null,
-                "Bill_to_Secondary_bounding_box": null,
-                "Date_of_Service": "12/04/2024 - 12/04/2024",
-                "Date_of_Service_bounding_box": [
-                    974,
-                    27,
-                    992,
-                    215
-                ],
-                "User_Status": null,
-                "User_Status_bounding_box": null
-            },
-            {
-                "CPT_HCPCS": "HC:97016",
-                "CPT_HCPCS_bounding_box": [
-                    1014,
-                    436,
-                    1032,
-                    513
-                ],
-                "Modifier": "GP,KX",
-                "Modifier_bounding_box": [
-                    1014,
-                    436,
-                    1032,
-                    535
-                ],
-                "DU": "1",
-                "DU_bounding_box": [
-                    1014,
-                    436,
-                    1032,
-                    553
-                ],
-                "Reason_Code": "CO-B11",
-                "Reason_Code_bounding_box": [
-                    1034,
-                    436,
-                    1052,
-                    513
-                ],
-                "Adj_Amount": "50.00",
-                "Adj_Amount_bounding_box": [
-                    1034,
-                    533,
-                    1052,
-                    593
-                ],
-                "Paid_Amount": "0.00",
-                "Paid_Amount_bounding_box": [
-                    1034,
-                    613,
-                    1052,
-                    656
-                ],
-                "Allowed_Amount": null,
-                "Allowed_Amount_bounding_box": null,
-                "Payer_Code": "N418",
-                "Payer_Code_bounding_box": [
-                    1014,
-                    533,
-                    1032,
-                    573
-                ],
-                "Billed_Amount": "50.00",
-                "Billed_Amount_bounding_box": [
-                    1034,
-                    533,
-                    1052,
-                    576
-                ],
-                "Dx_Pt": null,
-                "Dx_Pt_bounding_box": null,
-                "Co_Pay": null,
-                "Co_Pay_bounding_box": null,
-                "Deductible": null,
-                "Deductible_bounding_box": null,
-                "Co_insurance": null,
-                "Co_insurance_bounding_box": null,
-                "Bill_to_Secondary": null,
-                "Bill_to_Secondary_bounding_box": null,
-                "Date_of_Service": "12/04/2024 - 12/04/2024",
-                "Date_of_Service_bounding_box": [
-                    1014,
-                    27,
-                    1032,
-                    215
-                ],
-                "User_Status": null,
-                "User_Status_bounding_box": null
-            }
-        ]
+    "Patient_info": {
+      "Patient_Name": "BENITES, HECTOR",
+      "Patient_Name_bounding_box": [397, 34, 409, 133],
+      "Claim_Number": "STL3014658300",
+      "Claim_Number_bounding_box": [400, 273, 411, 363],
+      "Date_of_Service": "12/04/2024 - 12/04/2024",
+      "Date_of_Service_bounding_box": [400, 503, 412, 696],
+      "Patient_Account_Number": "107830618T0",
+      "Patient_Account_Number_bounding_box": [447, 117, 459, 182],
+      "Diagnosis": null,
+      "Diagnosis_bounding_box": null,
+      "Patient_ID": "98278098700",
+      "Patient_ID_bounding_box": [434, 117, 447, 182],
+      "Primary_insurance": "19",
+      "Primary_insurance_bounding_box": [400, 801, 411, 818],
+      "Claim_Frequency": "1",
+      "Claim_Frequency_bounding_box": [447, 595, 459, 602],
+      "Claim_charge": "$225.00",
+      "Claim_charge_bounding_box": [434, 922, 447, 961],
+      "Claim_Payment": "$0.00",
+      "Claim_Payment_bounding_box": [447, 934, 459, 960],
+      "Patient_responsibility": "$0.00",
+      "Patient_responsibility_bounding_box": [472, 934, 485, 960],
+      "Group_Policy": "92014",
+      "Group_Policy_bounding_box": [434, 273, 447, 303],
+      "Patient_Date_of_Birth": null,
+      "Patient_Date_of_Birth_bounding_box": null,
+      "Subscriber_id": null,
+      "Subscriber_id_bounding_box": null
     },
-    {
-        "EOB_info": {
-            "EOB_file_path": "",
-            "EOB_file_downloaded_date": "",
-            "EOB_page_number": "1",
-            "Payer": "UNITED HEALTHCARE INSURANCE COMPANY",
-            "Payer_bounding_box": [
-                19,
-                38,
-                38,
-                341
-            ],
-            "Provider": "PAUL WIENER PHYSICAL THERAPY PC",
-            "Provider_bounding_box": [
-                19,
-                449,
-                38,
-                728
-            ],
-            "Payee_ID": "1689750069",
-            "Payee_ID_bounding_box": [
-                49,
-                449,
-                68,
-                553
-            ],
-            "Cheque_number": "S3478759",
-            "Cheque_number_bounding_box": [
-                69,
-                449,
-                88,
-                613
-            ],
-            "Cheque_amount": "73.19",
-            "Cheque_amount_bounding_box": [
-                90,
-                449,
-                108,
-                580
-            ],
-            "Cheque_date": "01/02/2025",
-            "Cheque_date_bounding_box": [
-                110,
-                449,
-                128,
-                601
-            ]
-        },
-        "Patient_info": {
-            "Patient_Name": "VAYNGORTIN, LEV",
-            "Patient_Name_bounding_box": [
-                686,
-                31,
-                703,
-                163
-            ],
-            "Claim_Number": "KEN2552949400",
-            "Claim_Number_bounding_box": [
-                686,
-                203,
-                703,
-                316
-            ],
-            "Date_of_Service": "12/09/2024 - 12/09/2024",
-            "Date_of_Service_bounding_box": [
-                706,
-                203,
-                723,
-                376
-            ],
-            "Patient_Account_Number": "108009825T0",
-            "Patient_Account_Number_bounding_box": [
-                746,
-                203,
-                763,
-                302
-            ],
-            "Diagnosis": null,
-            "Diagnosis_bounding_box": null,
-            "Patient_ID": "970269988",
-            "Patient_ID_bounding_box": [
-                726,
-                203,
-                743,
-                283
-            ],
-            "Primary_insurance": "1",
-            "Primary_insurance_bounding_box": [
-                726,
-                203,
-                743,
-                485
-            ],
-            "Claim_Frequency": "1",
-            "Claim_Frequency_bounding_box": [
-                766,
-                349,
-                783,
-                458
-            ],
-            "Claim_charge": "$275.00",
-            "Claim_charge_bounding_box": [
-                786,
-                349,
-                803,
-                409
-            ],
-            "Claim_Payment": "$73.19",
-            "Claim_Payment_bounding_box": [
-                806,
-                349,
-                823,
-                403
-            ],
-            "Patient_responsibility": "$20.00",
-            "Patient_responsibility_bounding_box": [
-                846,
-                349,
-                863,
-                397
-            ],
-            "Group_Policy": "13694",
-            "Group_Policy_bounding_box": [
-                746,
-                349,
-                763,
-                392
-            ],
-            "Patient_Date_of_Birth": null,
-            "Patient_Date_of_Birth_bounding_box": null,
-            "Subscriber_id": null,
-            "Subscriber_id_bounding_box": null
-        },
-        "service_line_items": [
-            {
-                "CPT_HCPCS": "HC:97112",
-                "CPT_HCPCS_bounding_box": [
-                    806,
-                    489,
-                    823,
-                    553
-                ],
-                "Modifier": "GP,KX",
-                "Modifier_bounding_box": [
-                    806,
-                    489,
-                    823,
-                    597
-                ],
-                "DU": "1",
-                "DU_bounding_box": [
-                    806,
-                    489,
-                    823,
-                    612
-                ],
-                "Reason_Code": "PR-3, CO-45, CO-253",
-                "Reason_Code_bounding_box": [
-                    806,
-                    627,
-                    823,
-                    788
-                ],
-                "Adj_Amount": "37.44, 0.35",
-                "Adj_Amount_bounding_box": [
-                    826,
-                    798,
-                    843,
-                    857
-                ],
-                "Paid_Amount": "$17.21",
-                "Paid_Amount_bounding_box": [
-                    806,
-                    873,
-                    823,
-                    917
-                ],
-                "Allowed_Amount": "$37.56 (B6)",
-                "Allowed_Amount_bounding_box": [
-                    806,
-                    627,
-                    823,
-                    707
-                ],
-                "Payer_Code": null,
-                "Payer_Code_bounding_box": null,
-                "Billed_Amount": "$75.00",
-                "Billed_Amount_bounding_box": [
-                    806,
-                    722,
-                    823,
-                    767
-                ],
-                "Dx_Pt": null,
-                "Dx_Pt_bounding_box": null,
-                "Co_Pay": "20.00",
-                "Co_Pay_bounding_box": [
-                    806,
-                    798,
-                    823,
-                    848
-                ],
-                "Deductible": null,
-                "Deductible_bounding_box": null,
-                "Co_insurance": null,
-                "Co_insurance_bounding_box": null,
-                "Bill_to_Secondary": null,
-                "Bill_to_Secondary_bounding_box": null,
-                "Date_of_Service": "12/09/2024 - 12/09/2024",
-                "Date_of_Service_bounding_box": [
-                    806,
-                    314,
-                    823,
-                    475
-                ],
-                "User_Status": null,
-                "User_Status_bounding_box": null
-            },
-            {
-                "CPT_HCPCS": "HC:97110",
-                "CPT_HCPCS_bounding_box": [
-                    846,
-                    489,
-                    863,
-                    553
-                ],
-                "Modifier": "GP,KX",
-                "Modifier_bounding_box": [
-                    846,
-                    489,
-                    863,
-                    597
-                ],
-                "DU": "1",
-                "DU_bounding_box": [
-                    846,
-                    489,
-                    863,
-                    612
-                ],
-                "Reason_Code": "CO-253, PI-59",
-                "Reason_Code_bounding_box": [
-                    846,
-                    627,
-                    863,
-                    788
-                ],
-                "Adj_Amount": "0.48, 50.53",
-                "Adj_Amount_bounding_box": [
-                    846,
-                    798,
-                    863,
-                    857
-                ],
-                "Paid_Amount": "$23.99",
-                "Paid_Amount_bounding_box": [
-                    846,
-                    873,
-                    863,
-                    917
-                ],
-                "Allowed_Amount": "$24.47 (B6)",
-                "Allowed_Amount_bounding_box": [
-                    846,
-                    627,
-                    863,
-                    707
-                ],
-                "Payer_Code": null,
-                "Payer_Code_bounding_box": null,
-                "Billed_Amount": "$75.00",
-                "Billed_Amount_bounding_box": [
-                    846,
-                    722,
-                    863,
-                    767
-                ],
-                "Dx_Pt": null,
-                "Dx_Pt_bounding_box": null,
-                "Co_Pay": null,
-                "Co_Pay_bounding_box": null,
-                "Deductible": null,
-                "Deductible_bounding_box": null,
-                "Co_insurance": null,
-                "Co_insurance_bounding_box": null,
-                "Bill_to_Secondary": null,
-                "Bill_to_Secondary_bounding_box": null,
-                "Date_of_Service": "12/09/2024 - 12/09/2024",
-                "Date_of_Service_bounding_box": [
-                    846,
-                    314,
-                    863,
-                    475
-                ],
-                "User_Status": null,
-                "User_Status_bounding_box": null
-            },
-            {
-                "CPT_HCPCS": "HC:97140",
-                "CPT_HCPCS_bounding_box": [
-                    886,
-                    489,
-                    903,
-                    553
-                ],
-                "Modifier": "GP,KX",
-                "Modifier_bounding_box": [
-                    886,
-                    489,
-                    903,
-                    597
-                ],
-                "DU": "1",
-                "DU_bounding_box": [
-                    886,
-                    489,
-                    903,
-                    612
-                ],
-                "Reason_Code": "CO-253, PI-59",
-                "Reason_Code_bounding_box": [
-                    886,
-                    627,
-                    903,
-                    788
-                ],
-                "Adj_Amount": "0.45, 52.21",
-                "Adj_Amount_bounding_box": [
-                    886,
-                    798,
-                    903,
-                    857
-                ],
-                "Paid_Amount": "$22.34",
-                "Paid_Amount_bounding_box": [
-                    886,
-                    873,
-                    903,
-                    917
-                ],
-                "Allowed_Amount": "$22.79 (B6)",
-                "Allowed_Amount_bounding_box": [
-                    886,
-                    627,
-                    903,
-                    707
-                ],
-                "Payer_Code": null,
-                "Payer_Code_bounding_box": null,
-                "Billed_Amount": "$75.00",
-                "Billed_Amount_bounding_box": [
-                    886,
-                    722,
-                    903,
-                    767
-                ],
-                "Dx_Pt": null,
-                "Dx_Pt_bounding_box": null,
-                "Co_Pay": null,
-                "Co_Pay_bounding_box": null,
-                "Deductible": null,
-                "Deductible_bounding_box": null,
-                "Co_insurance": null,
-                "Co_insurance_bounding_box": null,
-                "Bill_to_Secondary": null,
-                "Bill_to_Secondary_bounding_box": null,
-                "Date_of_Service": "12/09/2024 - 12/09/2024",
-                "Date_of_Service_bounding_box": [
-                    886,
-                    314,
-                    903,
-                    475
-                ],
-                "User_Status": null,
-                "User_Status_bounding_box": null
-            },
-            {
-                "CPT_HCPCS": "HC:97016",
-                "CPT_HCPCS_bounding_box": [
-                    966,
-                    489,
-                    983,
-                    553
-                ],
-                "Modifier": "GP, KX",
-                "Modifier_bounding_box": [
-                    966,
-                    489,
-                    983,
-                    589
-                ],
-                "DU": "1",
-                "DU_bounding_box": [
-                    966,
-                    489,
-                    983,
-                    605
-                ],
-                "Reason_Code": "CO-253 PI-59",
-                "Reason_Code_bounding_box": [
-                    966,
-                    627,
-                    983,
-                    788
-                ],
-                "Adj_Amount": "0.19 40.16",
-                "Adj_Amount_bounding_box": [
-                    966,
-                    798,
-                    983,
-                    857
-                ],
-                "Paid_Amount": "$9.65",
-                "Paid_Amount_bounding_box": [
-                    966,
-                    873,
-                    983,
-                    911
-                ],
-                "Allowed_Amount": "$9.84 (B6)",
-                "Allowed_Amount_bounding_box": [
-                    966,
-                    627,
-                    983,
-                    699
-                ],
-                "Payer_Code": null,
-                "Payer_Code_bounding_box": null,
-                "Billed_Amount": null,
-                "Billed_Amount_bounding_box": [
-                    966,
-                    722,
-                    983,
-                    775
-                ],
-                "Dx_Pt": null,
-                "Dx_Pt_bounding_box": null,
-                "Co_Pay": null,
-                "Co_Pay_bounding_box": null,
-                "Deductible": null,
-                "Deductible_bounding_box": null,
-                "Co_insurance": null,
-                "Co_insurance_bounding_box": null,
-                "Bill_to_Secondary": null,
-                "Bill_to_Secondary_bounding_box": null,
-                "Date_of_Service": "12/09/2024 - 12/09/2024",
-                "Date_of_Service_bounding_box": [
-                    966,
-                    314,
-                    983,
-                    475
-                ],
-                "User_Status": null,
-                "User_Status_bounding_box": null
-            }
-        ]
-    }
+    "service_line_items": [
+      {
+        "CPT_HCPCS": "HC:97112",
+        "CPT_HCPCS_bounding_box": [567, 311, 580, 363],
+        "Modifier": "GP",
+        "Modifier_bounding_box": [567, 373, 580, 388],
+        "DU": "1",
+        "DU_bounding_box": [567, 438, 580, 444],
+        "Reason_Code": "CO-B11",
+        "Reason_Code_bounding_box": [567, 733, 580, 772],
+        "Adj_Amount": "75.00",
+        "Adj_Amount_bounding_box": [567, 848, 580, 881],
+        "Paid_Amount": "0.00",
+        "Paid_Amount_bounding_box": [567, 934, 580, 960],
+        "Allowed_Amount": null,
+        "Allowed_Amount_bounding_box": null,
+        "Payer_Code": "N418",
+        "Payer_Code_bounding_box": [567, 471, 580, 497],
+        "Billed_Amount": "$75.00",
+        "Billed_Amount_bounding_box": [567, 698, 580, 732],
+        "Dx_Pt": null,
+        "Dx_Pt_bounding_box": null,
+        "Co_Pay": null,
+        "Co_Pay_bounding_box": null,
+        "Deductible": null,
+        "Deductible_bounding_box": null,
+        "Co_insurance": null,
+        "Co_insurance_bounding_box": null,
+        "Bill_to_Secondary": null,
+        "Bill_to_Secondary_bounding_box": null,
+        "Date_of_Service": "12/04/2024 -12/04/2024",
+        "Date_of_Service_bounding_box": [567, 117, 589, 181],
+        "User_Status": null,
+        "User_Status_bounding_box": null
+      },
+      {
+        "CPT_HCPCS": "HC:97110",
+        "CPT_HCPCS_bounding_box": [599, 311, 612, 363],
+        "Modifier": "GP",
+        "Modifier_bounding_box": [599, 373, 612, 388],
+        "DU": "1",
+        "DU_bounding_box": [599, 438, 612, 444],
+        "Reason_Code": "CO-B11",
+        "Reason_Code_bounding_box": [599, 733, 612, 772],
+        "Adj_Amount": "75.00",
+        "Adj_Amount_bounding_box": [599, 848, 612, 881],
+        "Paid_Amount": "0.00",
+        "Paid_Amount_bounding_box": [599, 934, 612, 960],
+        "Allowed_Amount": null,
+        "Allowed_Amount_bounding_box": null,
+        "Payer_Code": "N418",
+        "Payer_Code_bounding_box": [599, 471, 612, 497],
+        "Billed_Amount": "$75.00",
+        "Billed_Amount_bounding_box": [599, 698, 612, 732],
+        "Dx_Pt": null,
+        "Dx_Pt_bounding_box": null,
+        "Co_Pay": null,
+        "Co_Pay_bounding_box": null,
+        "Deductible": null,
+        "Deductible_bounding_box": null,
+        "Co_insurance": null,
+        "Co_insurance_bounding_box": null,
+        "Bill_to_Secondary": null,
+        "Bill_to_Secondary_bounding_box": null,
+        "Date_of_Service": "12/04/2024 -12/04/2024",
+        "Date_of_Service_bounding_box": [599, 117, 621, 181],
+        "User_Status": null,
+        "User_Status_bounding_box": null
+      },
+      {
+        "CPT_HCPCS": "HC:97140",
+        "CPT_HCPCS_bounding_box": [631, 311, 644, 363],
+        "Modifier": "GP",
+        "Modifier_bounding_box": [631, 373, 644, 388],
+        "DU": "1",
+        "DU_bounding_box": [631, 438, 644, 444],
+        "Reason_Code": "CO-B11",
+        "Reason_Code_bounding_box": [631, 733, 644, 772],
+        "Adj_Amount": "75.00",
+        "Adj_Amount_bounding_box": [631, 848, 644, 881],
+        "Paid_Amount": "0.00",
+        "Paid_Amount_bounding_box": [631, 934, 644, 960],
+        "Allowed_Amount": null,
+        "Allowed_Amount_bounding_box": null,
+        "Payer_Code": "N418",
+        "Payer_Code_bounding_box": [631, 471, 644, 497],
+        "Billed_Amount": "$75.00",
+        "Billed_Amount_bounding_box": [631, 698, 644, 732],
+        "Dx_Pt": null,
+        "Dx_Pt_bounding_box": null,
+        "Co_Pay": null,
+        "Co_Pay_bounding_box": null,
+        "Deductible": null,
+        "Deductible_bounding_box": null,
+        "Co_insurance": null,
+        "Co_insurance_bounding_box": null,
+        "Bill_to_Secondary": null,
+        "Bill_to_Secondary_bounding_box": null,
+        "Date_of_Service": "12/04/2024 -12/04/2024",
+        "Date_of_Service_bounding_box": [631, 117, 653, 181],
+        "User_Status": null,
+        "User_Status_bounding_box": null
+      }
+    ]
+  },
+  {
+    "EOB_info": {
+      "EOB_file_path": "",
+      "EOB_file_downloaded_date": "",
+      "EOB_page_number": "1",
+      "Payer": "UNITED HEALTHCARE INSURANCE COMPANY",
+      "Payer_bounding_box": [269, 33, 281, 256],
+      "Provider": "PAUL WIENER PHYSICAL THERAPY PC",
+      "Provider_bounding_box": [271, 696, 295, 842],
+      "Payee_ID": "1689750069",
+      "Payee_ID_bounding_box": [301, 533, 313, 600],
+      "Cheque_number": "S3478759",
+      "Cheque_number_bounding_box": [318, 533, 330, 600],
+      "Cheque_amount": "$73.19",
+      "Cheque_amount_bounding_box": [572, 825, 586, 958],
+      "Cheque_date": "01/02/2025",
+      "Cheque_date_bounding_box": [351, 533, 363, 600]
+    },
+    "Patient_info": {
+      "Patient_Name": "HALUSKA, MICHAEL F",
+      "Patient_Name_bounding_box": [721, 31, 734, 213],
+      "Claim_Number": "STL3014658200",
+      "Claim_Number_bounding_box": [721, 332, 734, 416],
+      "Date_of_Service": "12/04/2024 - 12/04/2024",
+      "Date_of_Service_bounding_box": [721, 567, 734, 696],
+      "Patient_Account_Number": "107830634T0",
+      "Patient_Account_Number_bounding_box": [34, 123, 49, 213],
+      "Diagnosis": null,
+      "Diagnosis_bounding_box": null,
+      "Patient_ID": "98200342600",
+      "Patient_ID_bounding_box": [752, 31, 765, 104],
+      "Primary_insurance": "19\nOPTUM CARE NETWORK\n- OPTUM CARE NETWORK",
+      "Primary_insurance_bounding_box": [721, 733, 758, 863],
+      "Claim_Frequency": "11",
+      "Claim_Frequency_bounding_box": [429, 608, 443, 696],
+      "Claim_charge": "$275.00",
+      "Claim_charge_bounding_box": [752, 916, 765, 960],
+      "Claim_Payment": null,
+      "Claim_Payment_bounding_box": null,
+      "Patient_responsibility": "$0.00",
+      "Patient_responsibility_bounding_box": [34, 931, 49, 960],
+      "Group_Policy": "92014",
+      "Group_Policy_bounding_box": [752, 266, 765, 364],
+      "Patient_Date_of_Birth": null,
+      "Patient_Date_of_Birth_bounding_box": null,
+      "Subscriber_id": null,
+      "Subscriber_id_bounding_box": null
+    },
+    "service_line_items": [
+      {
+        "CPT_HCPCS": "HC:97112",
+        "CPT_HCPCS_bounding_box": [318, 308, 332, 361],
+        "Modifier": "GP,KX",
+        "Modifier_bounding_box": [318, 367, 332, 404],
+        "DU": "1",
+        "DU_bounding_box": [332, 308, 345, 315],
+        "Reason_Code": "CO-B11",
+        "Reason_Code_bounding_box": [318, 733, 332, 771],
+        "Adj_Amount": "75.00",
+        "Adj_Amount_bounding_box": [318, 848, 332, 884],
+        "Paid_Amount": "0.00",
+        "Paid_Amount_bounding_box": [318, 931, 332, 960],
+        "Allowed_Amount": null,
+        "Allowed_Amount_bounding_box": null,
+        "Payer_Code": "N418",
+        "Payer_Code_bounding_box": [318, 434, 332, 461],
+        "Billed_Amount": "$75.00",
+        "Billed_Amount_bounding_box": [318, 699, 332, 733],
+        "Dx_Pt": null,
+        "Dx_Pt_bounding_box": null,
+        "Co_Pay": null,
+        "Co_Pay_bounding_box": null,
+        "Deductible": null,
+        "Deductible_bounding_box": null,
+        "Co_insurance": null,
+        "Co_insurance_bounding_box": null,
+        "Bill_to_Secondary": null,
+        "Bill_to_Secondary_bounding_box": null,
+        "Date_of_Service": "12/04/2024 -12/04/2024",
+        "Date_of_Service_bounding_box": [318, 123, 345, 213],
+        "User_Status": null,
+        "User_Status_bounding_box": null
+      },
+      {
+        "CPT_HCPCS": "HC:97110",
+        "CPT_HCPCS_bounding_box": [348, 308, 362, 361],
+        "Modifier": "GP,KX",
+        "Modifier_bounding_box": [348, 367, 362, 404],
+        "DU": "1",
+        "DU_bounding_box": [362, 308, 375, 315],
+        "Reason_Code": "CO-B11",
+        "Reason_Code_bounding_box": [348, 733, 362, 771],
+        "Adj_Amount": "75.00",
+        "Adj_Amount_bounding_box": [348, 848, 362, 884],
+        "Paid_Amount": "0.00",
+        "Paid_Amount_bounding_box": [348, 931, 362, 960],
+        "Allowed_Amount": null,
+        "Allowed_Amount_bounding_box": null,
+        "Payer_Code": "N418",
+        "Payer_Code_bounding_box": [348, 434, 362, 461],
+        "Billed_Amount": "$75.00",
+        "Billed_Amount_bounding_box": [348, 699, 362, 733],
+        "Dx_Pt": null,
+        "Dx_Pt_bounding_box": null,
+        "Co_Pay": null,
+        "Co_Pay_bounding_box": null,
+        "Deductible": null,
+        "Deductible_bounding_box": null,
+        "Co_insurance": null,
+        "Co_insurance_bounding_box": null,
+        "Bill_to_Secondary": null,
+        "Bill_to_Secondary_bounding_box": null,
+        "Date_of_Service": "12/04/2024 -12/04/2024",
+        "Date_of_Service_bounding_box": [348, 123, 375, 213],
+        "User_Status": null,
+        "User_Status_bounding_box": null
+      },
+      {
+        "CPT_HCPCS": "HC:97140",
+        "CPT_HCPCS_bounding_box": [378, 308, 392, 361],
+        "Modifier": "GP,KX",
+        "Modifier_bounding_box": [378, 367, 392, 404],
+        "DU": "1",
+        "DU_bounding_box": [392, 308, 405, 315],
+        "Reason_Code": "CO-B11",
+        "Reason_Code_bounding_box": [378, 733, 392, 771],
+        "Adj_Amount": "75.00",
+        "Adj_Amount_bounding_box": [378, 848, 392, 884],
+        "Paid_Amount": "0.00",
+        "Paid_Amount_bounding_box": [378, 931, 392, 960],
+        "Allowed_Amount": null,
+        "Allowed_Amount_bounding_box": null,
+        "Payer_Code": "N418",
+        "Payer_Code_bounding_box": [378, 434, 392, 461],
+        "Billed_Amount": "$75.00",
+        "Billed_Amount_bounding_box": [378, 699, 392, 733],
+        "Dx_Pt": null,
+        "Dx_Pt_bounding_box": null,
+        "Co_Pay": null,
+        "Co_Pay_bounding_box": null,
+        "Deductible": null,
+        "Deductible_bounding_box": null,
+        "Co_insurance": null,
+        "Co_insurance_bounding_box": null,
+        "Bill_to_Secondary": null,
+        "Bill_to_Secondary_bounding_box": null,
+        "Date_of_Service": "12/04/2024 -12/04/2024",
+        "Date_of_Service_bounding_box": [378, 123, 405, 213],
+        "User_Status": null,
+        "User_Status_bounding_box": null
+      }
+    ]
+  },
+  {
+    "EOB_info": {
+      "EOB_file_path": "",
+      "EOB_file_downloaded_date": "",
+      "EOB_page_number": "1",
+      "Payer": "UNITED HEALTHCARE INSURANCE COMPANY",
+      "Payer_bounding_box": [269, 33, 281, 256],
+      "Provider": "PAUL WIENER PHYSICAL THERAPY PC",
+      "Provider_bounding_box": [271, 696, 295, 842],
+      "Payee_ID": "1689750069",
+      "Payee_ID_bounding_box": [301, 533, 313, 600],
+      "Cheque_number": "S3478759",
+      "Cheque_number_bounding_box": [318, 533, 330, 600],
+      "Cheque_amount": "$73.19",
+      "Cheque_amount_bounding_box": [572, 825, 586, 958],
+      "Cheque_date": "01/02/2025",
+      "Cheque_date_bounding_box": [351, 533, 363, 600]
+    },
+    "Patient_info": {
+      "Patient_Name": "VAYNGORTIN, LEV",
+      "Patient_Name_bounding_box": [556, 34, 570, 136],
+      "Claim_Number": "KEN2552949400",
+      "Claim_Number_bounding_box": [556, 273, 570, 363],
+      "Date_of_Service": "12/09/2024 - 12/09/2024",
+      "Date_of_Service_bounding_box": [556, 564, 570, 693],
+      "Patient_Account_Number": "108009825T0",
+      "Patient_Account_Number_bounding_box": [573, 137, 587, 213],
+      "Diagnosis": null,
+      "Diagnosis_bounding_box": null,
+      "Patient_ID": "970269988",
+      "Patient_ID_bounding_box": [563, 137, 574, 203],
+      "Primary_insurance": "1",
+      "Primary_insurance_bounding_box": [556, 771, 570, 780],
+      "Claim_Frequency": "1",
+      "Claim_Frequency_bounding_box": [573, 687, 587, 693],
+      "Claim_charge": "$275.00",
+      "Claim_charge_bounding_box": [563, 922, 574, 961],
+      "Claim_Payment": "$73.19",
+      "Claim_Payment_bounding_box": [573, 928, 587, 961],
+      "Patient_responsibility": "$20.00",
+      "Patient_responsibility_bounding_box": [606, 928, 620, 961],
+      "Group_Policy": "13694",
+      "Group_Policy_bounding_box": [563, 305, 574, 395],
+      "Patient_Date_of_Birth": null,
+      "Patient_Date_of_Birth_bounding_box": null,
+      "Subscriber_id": null,
+      "Subscriber_id_bounding_box": null
+    },
+    "service_line_items": [
+      {
+        "CPT_HCPCS": "HC:97112",
+        "CPT_HCPCS_bounding_box": [676, 306, 690, 356],
+        "Modifier": "GP,KX",
+        "Modifier_bounding_box": [676, 364, 690, 395],
+        "DU": "1",
+        "DU_bounding_box": [690, 306, 704, 314],
+        "Reason_Code": "PR-3, CO-45, CO-253",
+        "Reason_Code_bounding_box": [676, 697, 690, 798],
+        "Adj_Amount": "37.44, 0.35",
+        "Adj_Amount_bounding_box": [690, 848, 718, 893],
+        "Paid_Amount": "$17.21",
+        "Paid_Amount_bounding_box": [676, 928, 690, 961],
+        "Allowed_Amount": "$37.56 (B6)",
+        "Allowed_Amount_bounding_box": [676, 564, 690, 624],
+        "Payer_Code": null,
+        "Payer_Code_bounding_box": null,
+        "Billed_Amount": "$75.00",
+        "Billed_Amount_bounding_box": [676, 697, 690, 733],
+        "Dx_Pt": null,
+        "Dx_Pt_bounding_box": null,
+        "Co_Pay": "20.00",
+        "Co_Pay_bounding_box": [676, 848, 690, 893],
+        "Deductible": null,
+        "Deductible_bounding_box": null,
+        "Co_insurance": null,
+        "Co_insurance_bounding_box": null,
+        "Bill_to_Secondary": null,
+        "Bill_to_Secondary_bounding_box": null,
+        "Date_of_Service": "12/09/2024 - 12/09/2024",
+        "Date_of_Service_bounding_box": [676, 137, 704, 213],
+        "User_Status": null,
+        "User_Status_bounding_box": null
+      },
+      {
+        "CPT_HCPCS": "HC:97110",
+        "CPT_HCPCS_bounding_box": [723, 306, 737, 356],
+        "Modifier": "GP,KX",
+        "Modifier_bounding_box": [723, 364, 737, 395],
+        "DU": "1",
+        "DU_bounding_box": [737, 306, 751, 314],
+        "Reason_Code": "CO-253, PI-59",
+        "Reason_Code_bounding_box": [723, 697, 737, 798],
+        "Adj_Amount": "0.48, 50.53",
+        "Adj_Amount_bounding_box": [723, 848, 751, 893],
+        "Paid_Amount": "$23.99",
+        "Paid_Amount_bounding_box": [723, 928, 737, 961],
+        "Allowed_Amount": "$24.47 (B6)",
+        "Allowed_Amount_bounding_box": [723, 564, 737, 624],
+        "Payer_Code": null,
+        "Payer_Code_bounding_box": null,
+        "Billed_Amount": "$75.00",
+        "Billed_Amount_bounding_box": [723, 697, 737, 733],
+        "Dx_Pt": null,
+        "Dx_Pt_bounding_box": null,
+        "Co_Pay": null,
+        "Co_Pay_bounding_box": null,
+        "Deductible": null,
+        "Deductible_bounding_box": null,
+        "Co_insurance": null,
+        "Co_insurance_bounding_box": null,
+        "Bill_to_Secondary": null,
+        "Bill_to_Secondary_bounding_box": null,
+        "Date_of_Service": "12/09/2024 - 12/09/2024",
+        "Date_of_Service_bounding_box": [723, 137, 751, 213],
+        "User_Status": null,
+        "User_Status_bounding_box": null
+      },
+      {
+        "CPT_HCPCS": "HC:97140",
+        "CPT_HCPCS_bounding_box": [770, 306, 784, 356],
+        "Modifier": "GP,KX",
+        "Modifier_bounding_box": [770, 364, 784, 395],
+        "DU": "1",
+        "DU_bounding_box": [784, 306, 798, 314],
+        "Reason_Code": "CO-253, PI-59",
+        "Reason_Code_bounding_box": [770, 697, 784, 798],
+        "Adj_Amount": "0.45, 52.21",
+        "Adj_Amount_bounding_box": [770, 848, 798, 893],
+        "Paid_Amount": "$22.34",
+        "Paid_Amount_bounding_box": [770, 928, 784, 961],
+        "Allowed_Amount": "$22.79 (B6)",
+        "Allowed_Amount_bounding_box": [770, 564, 784, 624],
+        "Payer_Code": null,
+        "Payer_Code_bounding_box": null,
+        "Billed_Amount": "$75.00",
+        "Billed_Amount_bounding_box": [770, 697, 784, 733],
+        "Dx_Pt": null,
+        "Dx_Pt_bounding_box": null,
+        "Co_Pay": null,
+        "Co_Pay_bounding_box": null,
+        "Deductible": null,
+        "Deductible_bounding_box": null,
+        "Co_insurance": null,
+        "Co_insurance_bounding_box": null,
+        "Bill_to_Secondary": null,
+        "Bill_to_Secondary_bounding_box": null,
+        "Date_of_Service": "12/09/2024 - 12/09/2024",
+        "Date_of_Service_bounding_box": [770, 137, 798, 213],
+        "User_Status": null,
+        "User_Status_bounding_box": null
+      }
+    ]
+  }
 ]
